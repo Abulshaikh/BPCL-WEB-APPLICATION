@@ -1,0 +1,56 @@
+.sales-card {
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  margin: 0;
+  background: #f0f8ff;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.sales-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #0077cc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Grid layout for charts */
+.chart-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+/* Each chart block styled as a card */
+.chart-block {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+.chart-block h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Recharts sizing inside cards */
+.recharts-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+}

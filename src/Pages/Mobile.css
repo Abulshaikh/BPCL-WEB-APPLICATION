@@ -1,0 +1,58 @@
+.mobile-wrapper {
+  max-width: 10000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #eddce8;
+  font-family: Arial, sans-serif;
+}
+
+.mobile-title {
+  text-align: center;
+  color: #1f2937;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 20px;
+}
+
+.vehicle-card {
+  background-color: #dedee9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.1s ease;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-3px);
+}
+
+.vehicle-img {
+  width: 250px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.vehicle-info {
+  text-align: center;
+}
+
+.vehicle-info h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.vehicle-info p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #374151;
+}

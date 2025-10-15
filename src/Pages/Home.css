@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Plant Page Styles */
+  .plant-page {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Plant Section Styles */
+  /* Plant Section Styles */
+.plant-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .plant-image {
+    width: 100%;
+    height: 500px; /* Set the desired height */
+    object-fit: cover; /* Ensures the image scales and crops proportionally */
+    border-radius: 8px;
+  }
+   .plant-description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Officers Section Styles */
+  .officers-section {
+    margin-top: 40px;
+  }
+  
+  .officers-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Officer Details Styles */
+  .officers-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .officer-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Reverse Row Styling */
+  .reverse-row {
+    flex-direction: row-reverse;
+  }
+  
+  /* Officer Hover Effect */
+  .officer-details:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background: linear-gradient(to right, #e3f2fd, #fce4ec);
+  }
+  
+  /* Officer Photo */
+  .officer-photo-large {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .officer-details:hover .officer-photo-large {
+    transform: scale(1.1);
+    border-color: #6c63ff; /* Modern purple accent */
+  }
+  
+  /* Officer Info */
+  .officer-info {
+    flex: 1;
+    text-align: left;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 10px;
+  }
+  
+  .officer-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+    transition: font-size 0.3s ease;
+  }
+  
+  .officer-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    transition: font-size 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Officer Hover Effect - Text */
+  .officer-details:hover .officer-name {
+    font-size: 1.7rem;
+    color: #6c63ff; /* Modern purple accent */
+  }
+  
+  .officer-details:hover .officer-description {
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  /* Prevent Overlap */
+  .officer-info {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .officer-photo-large {
+    z-index: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .officer-details {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .reverse-row {
+      flex-direction: column;
+    }
+  
+    .officer-info {
+      text-align: center;
+    }
+  }   

@@ -1,0 +1,112 @@
+.approvals-container {
+  min-height: 100vh;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.approvals-wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.approvals-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  animation: pulse 1.5s infinite;
+}
+
+.approvals-icon {
+  font-size: 3rem;
+}
+
+.approvals-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+/* Card with animated border */
+.approval-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.flashy-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg, #00f2fe, #4facfe, #00f2fe);
+  background-size: 300% 300%;
+  animation: borderFlow 6s ease infinite;
+  border-radius: 22px;
+}
+
+/* List styles */
+.approval-list {
+  list-style: decimal inside;
+  font-size: 1.1rem;
+  color: #334c9e;
+  font-weight: 500;
+}
+
+.approval-list li {
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  background-color: #f0f9ff;
+  border-left: 5px solid #38bdf8;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.approval-list li:hover {
+  transform: scale(1.02);
+  background-color: #e0f7ff;
+}
+
+/* Link */
+.approval-link {
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.approval-link:hover {
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

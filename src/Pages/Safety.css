@@ -1,0 +1,68 @@
+.safety-page {
+  padding: 2rem 4rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color : #f0f4f8;
+  color: #1a202c;
+  width: 100%; 
+  max-width: 100%;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #0b3d91;
+}
+
+.subheader {
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #4a5568;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.safety-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.safety-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.safety-image {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.safety-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0b3d91;
+  margin: 0;
+}
+
+.safety-description {
+  font-size: 1rem;
+  color: #2d3748;
+  margin-top: 0.5rem;
+}

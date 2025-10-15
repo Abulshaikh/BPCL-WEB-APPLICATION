@@ -1,0 +1,118 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #A0E8E1, #F2D1D1); /* Soft gradient, light blue and peach */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+/* Airlines Page */
+.airlines-page {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid Layout */
+.airlines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 50px;
+  justify-items: center;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+/* Airline Logo Cards */
+.airline-logo-card {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px; /* Adjusted card height */
+  width: 250px; /* Adjusted card width */
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for contrast */
+  position: relative;
+  cursor: pointer;
+  will-change: transform;
+  overflow: hidden; /* Ensure the content doesn't overflow */
+}
+
+/* Tilt Effect */
+.airline-logo-card:hover {
+  transform: perspective(1000px) rotateY(10deg) scale(1.05); /* Tilt and enlarge effect */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+/* Airline Logo */
+.airline-logo {
+  width: 100%; /* Adjust logo size */
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.airline-logo-card:hover .airline-logo {
+  transform: scale(1.2); /* Enlarge logo slightly on hover */
+}
+
+/* Footer Styling */
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .airlines-grid {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* For smaller screens */
+  }
+
+  .airline-logo-card {
+    height: 230px;
+    width: 230px;
+  }
+
+  .airline-logo {
+    width: 60%; /* Adjust logo size for smaller screens */
+  }
+}  

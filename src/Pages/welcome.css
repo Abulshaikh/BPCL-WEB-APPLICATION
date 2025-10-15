@@ -1,0 +1,77 @@
+/* src/Pages/welcome.css */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/Images/MOPA FUEL FARM.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.welcome-heading {
+  font-size: 40px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.welcome-card {
+  padding: 50px 70px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.welcome-card p {
+  font-size: 22px;
+  margin-bottom: 50px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.airplane-icon {
+  font-size: 60px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.airplane-icon:hover {
+  transform: scale(1.2);
+}
+
+.fly {
+  animation: flyAcross 2.5s forwards ease-in-out;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(30vw) translateY(-20vh) rotate(20deg);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateX(60vw) translateY(-40vh) rotate(30deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(100vw) translateY(-60vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+

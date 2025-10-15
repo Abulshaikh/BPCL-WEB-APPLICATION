@@ -1,0 +1,81 @@
+/* .Product {
+    border-radius: 24px;
+    margin-bottom: 30px;
+    padding: 0 10px 0 10px;
+    margin: 20px;
+} */
+/* Flex container for all cards */
+.product-grid {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px 20px; /* Top-Bottom: 40px, Left-Right: 20px */
+  box-sizing: border-box;
+  /* Background image */
+  background-image: url("/Images/FUELTANK.jpg"); /* Replace with your image path */
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Individual card container */
+.Product {
+  flex: 1 1 calc(15% - 20px); /* 6 cards per row with gap */
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left:20px;
+  margin-right: 20px;
+  border-radius: 24px;
+}
+
+/* Ensure the card fills its wrapper */
+.MuiCard-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: fix image height */
+.MuiCardMedia-root {
+  height: 140px;
+  object-fit: cover;
+}
+@media (max-width: 1200px) {
+  .Product {
+    flex: 1 1 calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 900px) {
+  .Product {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .Product {
+    flex: 1 1 100%;
+  }
+}
+.MuiCard-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  /* Semi-transparent white for glass effect */
+  background-color: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Optional hover effect */
+.MuiCard-root:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
